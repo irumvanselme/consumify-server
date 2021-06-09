@@ -12,9 +12,8 @@ class TodosController extends Controller {
     }
 
     async create (req: Request, res: Response) {
-        let valid = super.validate(req.body,Todo.validations);
-
-        if(valid.fails()) return res.send(valid.errors.all())
+        let { valid, errors } = super.validate(req.body,Todo.validations);
+        if(!valid) return res.status(400).send(errors)
 
         let newTodo = await Todo.create(req.body)
 
