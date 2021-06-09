@@ -1,9 +1,10 @@
 import { Router } from "express";
-import TodoController from "../controllers/todos.controller";
+import { TodosController } from "../controllers/todos.controller";
 
 const router = Router();
+const controller = new TodosController();
 
-router.get("/", TodoController.get_all);
-router.post("/", TodoController.create);
+router.get("/", controller.get_all);
+router.post("/", controller.create);
 
-export default router;
+export const todos_routes = router

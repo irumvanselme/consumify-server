@@ -1,10 +1,10 @@
 import { Router } from "express"
-
-import ServiceController from "../controllers/services.controller"
+import { ServiceController } from "../controllers/services.controller";
 
 const router = Router()
+const controller = new ServiceController()
 
-router.get("/", ServiceController.get_all)
-router.post("/", ServiceController.create)
+router.get("/", controller.get_all)
+router.post("/", controller.create)
 
-export default router
+export const service_routes = router

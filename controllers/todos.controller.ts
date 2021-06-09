@@ -21,4 +21,4 @@ class TodosController extends Controller {
     }
 }
 
-export default new TodosController();
+export { TodosController }

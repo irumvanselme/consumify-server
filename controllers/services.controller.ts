@@ -11,11 +11,11 @@ class ServiceController extends Controller {
     }
 
     async create (req: Request, res: Response) {
-        let { valid, errors } = super.validate(req.body,Service.validations);
-        if(!valid) return res.send(errors)
+        let { valid, errors } = super.validate(req.body, Service.validations);
+        if (!valid) return res.send(errors)
         let newTodo = await Service.create(req.body)
         res.send(newTodo);
     }
 }
 
-export default new ServiceController();
+export { ServiceController }
