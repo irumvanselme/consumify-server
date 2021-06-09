@@ -1,4 +1,5 @@
 import { Schema, SchemaDefinition } from "mongoose";
+import { Service } from "../../../interfaces/Service";
 
 const serviceSchema: SchemaDefinition = {
     name: {
@@ -12,4 +13,4 @@ const serviceSchema: SchemaDefinition = {
     },
 };
 
-export const ServiceSchema = new Schema(serviceSchema)
+export const ServiceSchema = new Schema<Service>(serviceSchema)

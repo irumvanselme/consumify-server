@@ -1,4 +1,5 @@
 import { Schema } from "mongoose";
+import { Todo } from "../../../interfaces/Todo";
 
 const todoSchema = {
     name: {
@@ -12,4 +13,4 @@ const todoSchema = {
     },
 };
 
-export const TodoSchema = new Schema(todoSchema)
+export const TodoSchema = new Schema<Todo>(todoSchema)

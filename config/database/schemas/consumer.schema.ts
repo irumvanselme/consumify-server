@@ -1,4 +1,5 @@
 import { Schema, SchemaDefinition, Types } from "mongoose";
+import { Consumer } from "../../../interfaces/Consumer";
 
 const consumerSchema: SchemaDefinition = {
     user_id: {
@@ -13,4 +14,4 @@ const consumerSchema: SchemaDefinition = {
     }
 };
 
-export const ConsumerSchema = new Schema(consumerSchema)
+export const ConsumerSchema = new Schema<Consumer>(consumerSchema)

@@ -1,5 +1,6 @@
 import { Schema, SchemaDefinition } from "mongoose";
 import { user_types } from "../enums/user_types";
+import { User } from "../../../interfaces/User";
 
 const userSchema: SchemaDefinition = {
     full_names: {
@@ -50,4 +51,4 @@ const userSchema: SchemaDefinition = {
     }
 };
 
-export const UserSchema = new Schema(userSchema)
+export const UserSchema = new Schema<User>(userSchema)

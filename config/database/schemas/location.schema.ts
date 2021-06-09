@@ -1,4 +1,5 @@
 import { Schema, SchemaDefinition } from "mongoose";
+import { Location } from "../../../interfaces/Location";
 
 const locationSchema: SchemaDefinition = {
     name: {
@@ -8,4 +9,4 @@ const locationSchema: SchemaDefinition = {
     }
 };
 
-export const LocationSchema = new Schema(locationSchema)
+export const LocationSchema = new Schema<Location>(locationSchema)

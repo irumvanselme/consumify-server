@@ -1,4 +1,5 @@
 import { Schema, SchemaDefinition, Types } from "mongoose";
+import { Vendor } from "../../../interfaces/Vendor";
 
 const vendorSchema: SchemaDefinition = {
     user_id: {
@@ -18,4 +19,4 @@ const vendorSchema: SchemaDefinition = {
     }]
 };
 
-export const VendorSchema = new Schema(vendorSchema)
+export const VendorSchema = new Schema<Vendor>(vendorSchema)

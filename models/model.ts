@@ -7,8 +7,8 @@ export class Model<Type> {
         return this._model;
     }
 
-    constructor (name: string, schema: mongoose.Schema) {
-        this._model = mongoose.model(name, schema)
+    constructor (name: string, schema: mongoose.Schema<Type>) {
+        this._model = mongoose.model<Type>(name, schema)
     }
 
     public all () {
