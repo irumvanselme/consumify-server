@@ -2,6 +2,7 @@ import Validator from "validatorjs";
 
 export class Controller {
     validate (data: any, validations: any) {
-        return new Validator(data, validations)
+        let validate = new Validator(data, validations)
+        return { valid: validate.passes(), errors: validate.errors.all() }
     }
 }
