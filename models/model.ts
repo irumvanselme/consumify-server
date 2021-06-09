@@ -1,6 +1,8 @@
 import mongoose from "mongoose";
 
 export class Model<Type> {
+    validations = {}
+
     private readonly _model: mongoose.Model<any>;
 
     get query (): mongoose.Model<any> {

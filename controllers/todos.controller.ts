@@ -12,10 +12,7 @@ class TodosController extends Controller {
     }
 
     async create (req: Request, res: Response) {
-        let valid = super.validate(req.body, {
-            name: "string|required|min:4",
-            description: "string|required|min:10"
-        });
+        let valid = super.validate(req.body,Todo.validations);
 
         if(valid.fails()) return res.send(valid.errors.all())
 

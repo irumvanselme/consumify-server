@@ -4,4 +4,5 @@ export interface Vendor {
     _id: Types.ObjectId,
     user_id: Types.ObjectId,
     locations: Array<Types.ObjectId>
+    services: Array<Types.ObjectId>
 }
