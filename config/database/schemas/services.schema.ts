@@ -11,6 +11,10 @@ const serviceSchema: SchemaDefinition = {
         type: String,
         minlength: 10
     },
+    icon: {
+        type: String,
+        minlength: 3
+    }
 };
 
 export const ServiceSchema = new Schema<Service>(serviceSchema)
