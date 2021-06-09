@@ -15,7 +15,6 @@ const userSchema: SchemaDefinition = {
         minlength: 4
     },
     email: {
-        required: true,
         type: String,
         unique: true,
         minlength: 4
@@ -27,12 +26,10 @@ const userSchema: SchemaDefinition = {
         minlength: 4
     },
     title: {
-        required: true,
         type: String,
         minlength: 4
     },
     bio: {
-        required: true,
         type: String,
         minlength: 4
     },
