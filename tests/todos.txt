@@ -1,0 +1,12 @@
+TODO: Register
+TODO: Login
+TODO: Update profile (admin, consumer, vendor)
+TODO: Allow admin to register services
+TODO: Make a CRUD of SERVICE
+TODO: Make a CRUD of LOCATION
+
+Application based todos
+
+TODO: Allow the vendor to register services they offer
+TODO: Allow the consumers to search the services they are offered
+TODO: Show the statistics to the admin
