@@ -1,6 +1,12 @@
 POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 
-{}
+{
+  "full_names": "IRUMVA Anselme",
+  "username": "anacoder",
+  "password": "Kirehe123",
+  "phone": "783384212",
+  "user_type": "CUSTOMER"
+}
 
 ###

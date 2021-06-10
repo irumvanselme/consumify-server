@@ -11,8 +11,8 @@ class UserModel extends Model<User> {
         title: "string|min:4",
         bio: "string|min:4",
         profile_image: "string|min:4",
-        user_type: "string|in:CUSTOMER,VENDOR",
-        password: "string|min:3"
+        user_type: "required|string|in:CUSTOMER,VENDOR",
+        password: "required|string|min:3"
     }
 
     constructor () {

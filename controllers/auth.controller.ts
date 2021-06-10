@@ -7,6 +7,8 @@ import User from "../models/user.model"
 
 import { Controller } from "./index";
 
+import { hash } from "../utils/hash"
+
 class AuthController extends Controller {
     login_validations = {
         login: "required|string|min:3",
@@ -17,7 +19,11 @@ class AuthController extends Controller {
         let { valid, errors } = super.validate(req.body, User.validations);
         if (!valid) return res.status(400).send(errors)
 
+        req.body.password = await hash(req.body.password);
         let newTodo = await User.create(req.body)
+
+        if(newTodo) return res.send(newTodo)
+        else return res.status(500).send("Failed to create the method")
     }
 
     async login (req: Request, res: Response) {
