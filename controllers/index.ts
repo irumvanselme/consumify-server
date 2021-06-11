@@ -1,4 +1,4 @@
-import Validator from "validatorjs";
+import { Validator } from "../config/validator";
 
 export class Controller {
     validate (data: any, validations: any) {

@@ -14,21 +14,11 @@ export class Model<Type> {
     }
 
     public all () {
-        try {
-            return this.query.find();
-        } catch ( e ) {
-            console.log(e)
-            process.exit(0)
-        }
+        return this.query.find();
     }
 
-    public async create(data: Type){
-        try {
-            let element = new this._model(data)
-            return await element.save()
-        } catch ( e ) {
-            console.log(e)
-            process.exit(0)
-        }
+    public async create (data: Type) {
+        let element = new this._model(data)
+        return await element.save()
     }
 }
