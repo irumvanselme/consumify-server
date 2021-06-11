@@ -3,10 +3,13 @@ Content-Type: application/json
 
 {
   "full_names": "IRUMVA Anselme",
-  "username": "anacoder",
+  "username": "anacoder.second",
+  "email": "kalisa.augustin@gmail.com",
+  "title": "Student at Rwanda Coding Academy",
+  "bio": "Holla Mucho gusto",
   "password": "Kirehe123",
-  "phone": "783384212",
-  "user_type": "CUSTOMER"
+  "phone": "784565234",
+  "user_type": "VENDOR"
 }
 
 ###
@@ -15,6 +18,6 @@ POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "login": "anacoder",
+  "login": "kalisa.augustin@gmail.com",
   "password": "Kirehe123"
 }

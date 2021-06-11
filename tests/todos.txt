@@ -1,5 +1,7 @@
-TODO: Register
-TODO: Login
+TODO: Register     -> Done
+TODO: Login   -> Done
+TODO: Access Profile
+
 TODO: Update profile (admin, consumer, vendor)
 TODO: Allow admin to register services
 TODO: Make a CRUD of SERVICE

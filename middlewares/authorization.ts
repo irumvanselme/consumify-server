@@ -1,7 +1,7 @@
 import { NextFunction, Response } from "express";
 import jwt from "jsonwebtoken"
-import { RequestWithUser } from "../interfaces/RequestWithUser";
 import { User } from "../interfaces/User";
+import { RequestWithUser } from "../interfaces/RequestWithUser";
 
 export function authorizationMiddleware(req: RequestWithUser, res: Response, next: NextFunction){
     const token = req.header('x-auth-token')
