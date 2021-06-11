@@ -1,13 +1,13 @@
-GET http://localhost:3000/api/services
+DELETE http://localhost:3000/api/services/60c3b511b52dd08be2880cb0
 Accept: application/json
 
 ###
 
-POST http://localhost:3000/api/services
+GET http://localhost:3000/api/services
 Content-Type: application/json
 
 {
-  "name": "Health care",
-  "description": "A very cool description",
-  "icon": "No Icon"
+  "name": "Updated Health care",
+  "description": "Updated A very cool description",
+  "icon": "Updated No Icon"
 }

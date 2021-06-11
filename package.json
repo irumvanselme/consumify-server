@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev index.ts --quiet",
+    "dev": "ts-node-dev index.ts",
     "compile": "tsc",
     "start": "node out/index.js"
   },
