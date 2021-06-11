@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 
 import Todo from "../models/todo.model"
-import { Controller } from "./index";
+import { Controller } from ".";
 
 class TodosController extends Controller {
 

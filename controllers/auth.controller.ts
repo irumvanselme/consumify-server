@@ -5,21 +5,36 @@ import { Request, Response } from "express";
 
 import User from "../models/user.model"
 
-import { Controller } from "./index";
+import { Controller } from ".";
 
 import { hash } from "../utils/hash"
+import { formatRes } from "../utils/response";
 
 class AuthController extends Controller {
 
     async register (req: Request, res: Response) {
-        let { valid, errors } = super.validate(req.body, User.validations);
-        if (!valid) return res.status(400).send(errors)
+        try {
+            let { valid, errors } = super.validate(req.body, User.validations);
+            if (!valid) return res.status(400).send(errors)
 
-        req.body.password = await hash(req.body.password);
-        let newTodo = await User.create(req.body)
+            let user = await User.query.findOne({
+                $or: [
+                    { username: req.body.username },
+                    { email: req.body.email },
+                    { phone: req.body.phone }
+                ]
+            })
 
-        if (newTodo) return res.send(newTodo)
-        else return res.status(500).send("Failed to create the method")
+            if (user) return res.status(400).send({ message: "User already registered ... " })
+
+            req.body.password = await hash(req.body.password);
+            let newUser = await User.create(req.body)
+
+            if (newUser) return res.send(newUser)
+            else return res.status(500).send(formatRes(1, "Failed to create a user", null))
+        } catch ( e ) {
+            return res.status(500).send(formatRes(1, "Failed to create a user", e))
+        }
     }
 
     async login (req: Request, res: Response) {

@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 
 import Service from "../models/service.model"
-import { Controller } from "./index";
+import { Controller } from ".";
 
 class ServiceController extends Controller {
 

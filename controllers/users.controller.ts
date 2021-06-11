@@ -1,7 +1,7 @@
 import { Request, Response } from "express"
 
 import User from "../models/user.model"
-import { Controller } from "./index";
+import { Controller } from ".";
 
 class UsersController extends Controller {
 
