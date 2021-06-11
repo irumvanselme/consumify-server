@@ -31,4 +31,4 @@ function formatAttribute (data: string) {
     else return data;
 }
 
-export default Validator;
+export { Validator };
