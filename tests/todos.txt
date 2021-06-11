@@ -4,8 +4,8 @@ TODO: Access Profile
 
 TODO: Update profile (admin, consumer, vendor)
 TODO: Allow admin to register services
-TODO: Make a CRUD of SERVICE
-TODO: Make a CRUD of LOCATION
+TODO: Make a CRUD of SERVICE -> Done
+TODO: Make a CRUD of LOCATION -> Done
 
 Application based todos
 
