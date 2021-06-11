@@ -4,3 +4,4 @@ yarn.lock
 tests/
 .idea/httpRequests
 out/
+*.lock
