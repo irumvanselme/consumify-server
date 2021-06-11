@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev index.ts --quiet",
     "compile": "tsc",
-    "export": "node out/index.js"
+    "start": "node out/index.js"
   },
   "repository": {
     "type": "git",
