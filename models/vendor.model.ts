@@ -15,3 +15,7 @@ class VendorModel extends Model<Vendor> {
 }
 
 export default new VendorModel()
+// TODO: Click me here
+
+
+// ! Don't do this my friend

@@ -3,11 +3,11 @@ Accept: application/json
 
 ###
 
-GET http://localhost:3000/api/services
+POST http://localhost:3000/api/services
 Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYwYzM2ZGJkYjU3OGNhMmY1Yzg2ZTZmNiIsImZ1bGxfbmFtZXMiOiJJUlVNVkEgQW5zZWxtZSIsInVzZXJuYW1lIjoiYW5hY29kZXIuc2Vjb25kIiwiZW1haWwiOiJrYWxpc2EuYXVndXN0aW5AZ21haWwuY29tIiwidGl0bGUiOiJTdHVkZW50IGF0IFJ3YW5kYSBDb2RpbmcgQWNhZGVteSIsImJpbyI6IkhvbGxhIE11Y2hvIGd1c3RvIiwicGFzc3dvcmQiOiIkMmIkMTAkazZtYzByVDBtNlc0cjEwTHdqaTQ4ZVR5SnZkTmFjaXp1RlR0bUQxcjNVTE1QMGFqUzlFS0ciLCJwaG9uZSI6Ijc4NDU2NTIzNCIsInVzZXJfdHlwZSI6IlZFTkRPUiIsIl9fdiI6MH0sImlhdCI6MTYyMzY0ODk3MiwiZXhwIjoxNjIzNjUyNTcyfQ.IgBQNA37kf0yuJ5EUUx7DMN3n3wjwpZAdlLe-4lgISo
 
 {
-  "name": "Updated Health care",
-  "description": "Updated A very cool description",
-  "icon": "Updated No Icon"
+
 }
+

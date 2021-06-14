@@ -1,8 +1,9 @@
-import { Request, Response } from "express"
+import { NextFunction, Request, Response } from "express"
 
 import Service from "../models/service.model"
 import { Controller } from ".";
 import { formatRes } from "../utils/response";
+import { RequestWithUser } from "../interfaces/RequestWithUser";
 
 class ServiceController extends Controller {
 
@@ -26,13 +27,14 @@ class ServiceController extends Controller {
         }
     }
 
-    async create (req: Request, res: Response) {
+    async create (req: RequestWithUser, res: Response, next: NextFunction) {
         try {
-            let { valid, errors } = super.validate(req.body, Service.validations);
-            if (!valid) return res.send(errors)
-
-            let newTodo = await Service.create(req.body)
-            return res.send(newTodo);
+            return res.send(req.user)
+            // let { valid, errors } = super.validate(req.body, Service.validations);
+            // if (!valid) return res.send(errors)
+            //
+            // let newTodo = await Service.create(req.body)
+            // return res.send(newTodo);
         } catch ( e ) {
             return res.status(500).send(formatRes(0, "Failed to show the service with this id", e))
         }
